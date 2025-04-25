@@ -1,19 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <com.example.artist.DrawingView
+        android:id="@+id/drawingView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_weight="0.3">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </com.example.artist.DrawingView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/border_background"
+        android:orientation="horizontal">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_palette"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            app:chipEndPadding="0dp"
+            app:chipIcon="@drawable/paint_palette"
+            app:chipIconSize="30dp"
+            app:chipMinHeight="40dp"
+            app:chipStrokeColor="@color/white"
+            app:ensureMinTouchTargetSize="false">
+
+        </com.google.android.material.chip.Chip>
+
+        <View
+            android:layout_width="0dip"
+            android:layout_height="30dp"
+            android:layout_weight="1" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_brush"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            app:chipEndPadding="0dp"
+            app:chipIcon="@drawable/paint_brush"
+            app:chipIconSize="30dp"
+            app:chipMinHeight="40dp"
+            app:chipStrokeColor="@color/white"
+            app:ensureMinTouchTargetSize="false">
+
+        </com.google.android.material.chip.Chip>
+
+        <View
+            android:layout_width="0dip"
+            android:layout_height="30dp"
+            android:layout_weight="1" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_import"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            app:chipEndPadding="0dp"
+            app:chipIcon="@drawable/download"
+            app:chipIconSize="30dp"
+            app:chipMinHeight="40dp"
+            app:chipStrokeColor="@color/white"
+            app:ensureMinTouchTargetSize="false">
+
+        </com.google.android.material.chip.Chip>
+
+        <View
+            android:layout_width="0dip"
+            android:layout_height="30dp"
+            android:layout_weight="1" />
+
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"
+            app:chipEndPadding="0dp"
+            app:chipIcon="@drawable/save"
+            app:chipIconSize="30dp"
+            app:chipMinHeight="40dp"
+            app:chipStrokeColor="@color/white"
+            app:ensureMinTouchTargetSize="false">
+
+        </com.google.android.material.chip.Chip>
+
+
+    </LinearLayout>
+
+</LinearLayout>
